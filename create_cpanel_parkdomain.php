@@ -1,7 +1,7 @@
 <?php
 
 	//including congifuration files
-	include_once "third_party/config.php";
+	include_once "include/config.php";
 	//including third party xmlapi
 	include_once "third_party/xmlapi.php";	
     $xmlapi = new xmlapi(SERVER_IP);
@@ -22,7 +22,7 @@
 			} else {
 				echo "Error while parking this domain account.See below details";
 				echo "<pre>";
-				print_r(cpanelresult->data[0]);
+				print_r($result->cpanelresult->data[0]);
 			}
 		} else {
 				echo "Unable park this domain.";
